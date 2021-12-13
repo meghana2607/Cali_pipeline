@@ -38,6 +38,13 @@ pipeline
             bat label:'',script:'mvn test'
                 echo "test succesful";
              }
+          }  
+          stage('Deploy') 
+        {
+            steps 
+            {
+            sshagent{['deploy_user']}
+            
           }   
        }
        }
