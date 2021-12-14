@@ -43,8 +43,7 @@ pipeline
         {
             steps 
             {
-            sshagent{['deploy_user']} {
-            sh"https://repo.maven.apache.org/maven2/org/apache/tomcat/coyote/6.0.29/coyote-6.0.29.jar"
+           bat label:"{tomcatBin}//startup.bat
 		}	
             
           }   
