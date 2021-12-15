@@ -1,6 +1,7 @@
 pipeline
    {
-    agent any
+    def tomcatWeb = 'D:\\Auto_deployment\\apache-tomcat-8.5.73\\apache-tomcat-8.5.73\\webapps'
+    def tomcatBin = 'D:\\Auto_deployment\\apache-tomcat-8.5.73\\apache-tomcat-8.5.73\\Bin'
     stages
     {
 
@@ -43,7 +44,8 @@ pipeline
         {
             steps 
             {
-           echo"deploy"
+	   bat"copy target\\JenkinsWar.war\"${tomcatWeb}\\JenkinsWar.war\""
+	   bat"${tomcatBin}\\startup.bat
 	   }
             
           }   
