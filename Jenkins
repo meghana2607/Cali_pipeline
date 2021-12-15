@@ -45,7 +45,7 @@ pipeline
             steps 
             {
 	   bat"copy target\\JenkinsWar.war\"${tomcatWeb}\\JenkinsWar.war\""
-	   bat"${tomcatBin}
+	   
 	   }
             
           }   
